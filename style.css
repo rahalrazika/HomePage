@@ -73,7 +73,6 @@ body {
   font-family: 'Jakarta Sans', sans-serif;
   font-size: 1.75rem;
   line-height: 1.7;
-  font-weight: 700;
   font-weight: bold;
   margin-bottom: 30px;
   color: rgba(24, 24, 27, 1);
@@ -88,16 +87,17 @@ body {
 }
 
 .image-item {
-  max-width: 250px;
+  max-width: 450px;
   margin-bottom: 30px;
   text-align: center;
   padding: 20px;
 }
 
 .image-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+  width: 400px;
+  height: 150px;
+  object-fit: cover;
+
   margin-bottom: 10px;
   box-shadow: 10px 10px 15px rgba(68, 255, 154, 0.5),
     -10px -10px 15px rgba(68, 176, 255, 0.5),
@@ -126,6 +126,29 @@ body {
   align-items: center;
 }
 
+.gradient-line-through {
+  position: relative;
+  color: black;
+}
+
+.gradient-line-through::before {
+  content: '';
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 58rem;
+  height: 0.6em;
+  background-image: linear-gradient(
+    to right,
+    rgba(240, 251, 185, 0.5),
+    rgba(251, 179, 160, 0.5),
+    rgba(191, 162, 253, 0.5),
+    rgba(164, 208, 252, 0.5),
+    rgba(159, 233, 226, 0.5),
+    rgba(159, 250, 206, 0.5)
+  );
+}
+
 .big-text {
   font-size: 3.5rem;
   font-weight: bold;
@@ -143,29 +166,10 @@ body {
 .ma-1 {
   margin-right: 1rem;
 }
-.gradient-rectangle {
-  position: absolute;
-  top: 206%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 58rem;
-  height: 2.1rem;
-  background: linear-gradient(
-    to bottom right,
-    rgba(240, 251, 185, 1),
-    rgba(251, 179, 160, 1),
-    rgba(191, 162, 253, 1),
-    rgba(164, 208, 252, 1),
-    rgba(159, 233, 226, 1),
-    rgba(159, 250, 206, 1)
-  );
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-  z-index: -1;
-}
 .container {
   border: 12px solid black;
   padding: 20px;
-  max-width: 200px;
+  max-width: 1200px;
   text-align: center;
   margin: auto;
   position: relative;
@@ -251,6 +255,7 @@ button img {
   text-align: left;
   margin-bottom: 15px;
   margin-top: 2rem;
+  max-width: 24rem;
 }
 
 .image-text strong {
@@ -361,10 +366,6 @@ svg {
   transition: color 0.3s ease;
 }
 
-.footer-item ul li a:hover {
-  color: #ffd700;
-}
-
 .footer-mobile {
   display: none;
 }
@@ -390,6 +391,9 @@ svg {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.underline-text {
+  text-decoration: underline;
+}
 
 /* Media queries */
 
@@ -406,8 +410,8 @@ svg {
   }
   .arrow-container {
     position: absolute;
-    top: 21%;
-    right: 23rem;
+    top: 26%;
+    right: 65%;
     transform: translate(-136%, -126%);
     display: flex;
     align-items: center;
@@ -447,14 +451,7 @@ svg {
   .small-text {
     font-size: 0.5rem;
   }
-  .gradient-rectangle {
-    position: absolute;
-    top: 318%;
-    left: 47%;
-    transform: translate(-50%, -50%);
-    width: 22rem;
-    height: 1rem;
-  }
+
   .feature-text {
     padding: 2rem;
   }
@@ -506,7 +503,7 @@ svg {
     background-color: black;
   }
   .third-container {
-    padding-right: 14px;
+    padding-right: 89px;
   }
   .footer-desktop {
     display: none;
@@ -545,10 +542,21 @@ svg {
   .copyright {
     font-size: 18px;
     color: rgba(152, 162, 179, 1);
-}
+  }
+  .gradient-line-through::before {
+    content: '';
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    width: 22rem;
+    height: 0.6em;
+  }
+  .image-item::before {
+    display: none;
+  }
 }
 
-@media (min-width: 800px) and (max-width: 1024px) {
+@media (min-width: 647px) and (max-width: 1024px) {
   /* Medium screens */
   .arrow-container {
     right: 74%;
@@ -567,7 +575,7 @@ svg {
     font-size: 1rem;
   }
   .left-71 {
-    margin-left: 45rem;
+    margin-left: 37rem;
   }
   .section {
     display: flex;
@@ -597,15 +605,34 @@ svg {
     width: 30px;
   }
   .colored-arrow {
-    left: 95%;
+    left: 97%;
+    bottom: 0;
+    transform: translateX(48%);
+    top: -11%;
   }
-  .gradient-rectangle {
+  .gradient-line-through::before {
+    content: '';
     position: absolute;
-    top: 354%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 38rem;
-    height: 1.5rem;
+    bottom: 0.5rem;
+    left: 0;
+    width: 35rem;
+    height: 0.6em;
+  }
+  .second-container::after {
+    content: '';
+    content: '';
+    position: absolute;
+    left: -10%;
+    bottom: -1px;
+    width: 29rem;
+    height: 2px;
+    background-color: black;
+  }
+  .third-container {
+    padding-right: 1rem;
+  }
+  .image-item::before {
+    display: none;
   }
 }
 
@@ -641,7 +668,7 @@ svg {
     width: 42rem;
   }
 }
-@media (min-width: 1800px) {
+@media (min-width: 1500px) {
   */
 /* Large screens */
  .arrow-container {
