@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wizardshot App</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body class="text-black font-jakarta">
+    <div class="hidden md:block">
+      <div class="flex justify-end pr-56 mt-4">
+        <p class="text-xs font-normal leading-6 font-pacifico">
+          100% free, forever 🤑
+        </p>
+      </div>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden p-4 md:block" style="margin-top: -12px">
+      <div class="flex items-center justify-between ml-44">
+        <div class="flex items-center">
+          <img src="/assets/images/icone.png" alt="Logo" class="w-8 h-8 mr-2" />
+          <span class="text-lg font-semibold">Wizardshot</span>
+        </div>
+
+        <!-- Main Navigation Links -->
+        <ul class="flex items-center space-x-4">
+          <li>
+            <a
+              href="#"
+              class="px-3 py-2 text-stone-500 hover:text-black hover:underline"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-3 py-2 text-stone-500 hover:text-black hover:underline"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-3 py-2 text-stone-500 hover:text-black hover:underline"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-3 py-2 text-stone-500 hover:text-black hover:underline"
+              >Help Center & Community</a
+            >
+          </li>
+        </ul>
+        <!-- Action Links -->
+        <ul class="flex items-center space-x-4 mr-44">
+          <li>
+            <a
+              href="#"
+              class="px-3 py-2 text-stone-500 hover:text-black hover:underline"
+              >Login</a
+            >
+          </li>
+          <button
+            type="button"
+            class="text-white bg-[#050708] hover:bg-[#050708]/80 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#050708]/40 dark:focus:ring-gray-600 me-2 mb-2"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              class="w-6 h-6 mr-2"
+              viewBox="0 0 48 48"
+            >
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.044-8.956,20-20,20S4,35.044,4,24S12.956,4,24,4S44,12.956,44,24z"
+              ></path>
+              <path
+                fill="#ffc107"
+                d="M24,4v20l8,4l-8.843,16c0.317,0,0.526,0,0.843,0c11.053,0,20-8.947,20-20S35.053,4,24,4z"
+              ></path>
+              <path
+                fill="#4caf50"
+                d="M44,24c0,11.044-8.956,20-20,20S4,35.044,4,24S12.956,4,24,4S44,12.956,44,24z"
+              ></path>
+              <path
+                fill="#ffc107"
+                d="M24,4v20l8,4l-8.843,16c0.317,0,0.526,0,0.843,0c11.053,0,20-8.947,20-20S35.053,4,24,4z"
+              ></path>
+              <path
+                fill="#f44336"
+                d="M41.84,15H24v13l-3-1L7.16,13.26H7.14C10.68,7.69,16.91,4,24,4C31.8,4,38.55,8.48,41.84,15z"
+              ></path>
+              <path
+                fill="#dd2c00"
+                d="M7.158,13.264l8.843,14.862L21,27L7.158,13.264z"
+              ></path>
+              <path
+                fill="#558b2f"
+                d="M23.157,44l8.934-16.059L28,25L23.157,44z"
+              ></path>
+              <path
+                fill="#f9a825"
+                d="M41.865,15H24l-1.579,4.58L41.865,15z"
+              ></path>
+              <path
+                fill="#fff"
+                d="M33,24c0,4.969-4.031,9-9,9s-9-4.031-9-9s4.031-9,9-9S33,19.031,33,24z"
+              ></path>
+              <path
+                fill="#2196f3"
+                d="M31,24c0,3.867-3.133,7-7,7s-7-3.133-7-7s3.133-7,7-7S31,20.133,31,24z"
+              ></path>
+            </svg>
+
+            Install Wizardshot
+          </button>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="divide-y md:hidden">
+      <div class="flex items-center justify-between p-4">
+        <div class="flex items-center">
+          <img src="/assets/images/icone.png" alt="Logo" class="w-8 h-8 mr-2" />
+          <span class="text-lg font-semibold">Wizardshot</span>
+        </div>
+        <button
+          id="mobile-menu-toggle"
+          class="text-3xl text-stone-500 hover:text-black focus:outline-none mr-7"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden p-4 divide-y">
+        <div>
+          <ul class="flex flex-col space-y-2">
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 text-stone-500 hover:text-black hover:underline"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 text-stone-500 hover:text-black hover:underline"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 text-stone-500 hover:text-black hover:underline"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 text-stone-500 hover:text-black hover:underline"
+                >Help Center & Community</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block px-4 py-2 text-stone-500 hover:text-black hover:underline"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center justify-end pr-56 mt-6">
+          <div class="flex flex-col items-center">
+            <button
+              type="button"
+              class="text-white mt-12 bg-[#050708] hover:bg-[#050708]/80 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#050708]/40 dark:focus:ring-gray-600 me-2 mb-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                class="w-6 h-6 mr-2"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  fill="#4caf50"
+                  d="M44,24c0,11.044-8.956,20-20,20S4,35.044,4,24S12.956,4,24,4S44,12.956,44,24z"
+                ></path>
+                <path
+                  fill="#ffc107"
+                  d="M24,4v20l8,4l-8.843,16c0.317,0,0.526,0,0.843,0c11.053,0,20-8.947,20-20S35.053,4,24,4z"
+                ></path>
+                <path
+                  fill="#4caf50"
+                  d="M44,24c0,11.044-8.956,20-20,20S4,35.044,4,24S12.956,4,24,4S44,12.956,44,24z"
+                ></path>
+                <path
+                  fill="#ffc107"
+                  d="M24,4v20l8,4l-8.843,16c0.317,0,0.526,0,0.843,0c11.053,0,20-8.947,20-20S35.053,4,24,4z"
+                ></path>
+                <path
+                  fill="#f44336"
+                  d="M41.84,15H24v13l-3-1L7.16,13.26H7.14C10.68,7.69,16.91,4,24,4C31.8,4,38.55,8.48,41.84,15z"
+                ></path>
+                <path
+                  fill="#dd2c00"
+                  d="M7.158,13.264l8.843,14.862L21,27L7.158,13.264z"
+                ></path>
+                <path
+                  fill="#558b2f"
+                  d="M23.157,44l8.934-16.059L28,25L23.157,44z"
+                ></path>
+                <path
+                  fill="#f9a825"
+                  d="M41.865,15H24l-1.579,4.58L41.865,15z"
+                ></path>
+                <path
+                  fill="#fff"
+                  d="M33,24c0,4.969-4.031,9-9,9s-9-4.031-9-9s4.031-9,9-9S33,19.031,33,24z"
+                ></path>
+                <path
+                  fill="#2196f3"
+                  d="M31,24c0,3.867-3.133,7-7,7s-7-3.133-7-7s3.133-7,7-7S31,20.133,31,24z"
+                ></path>
+              </svg>
+              Install Wizardshot
+            </button>
+            <p
+              class="text-xs font-normal leading-6 text-center font-pacifico"
+              style="margin-top: -4px"
+            >
+              100% free, forever 🤑
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- First section  -->
+    <div class="p-8 py-20 text-center">
+      <h2 class="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl lg:text-6xl">
+        Your Magic Wand for
+      </h2>
+      <h2 class="mb-4 text-4xl font-bold text-gray-900 sm:text-5xl lg:text-6xl">
+        Instant Documentation
+      </h2>
+
+      <p class="mb-6 text-lg text-gray-600">
+        Turn ANY process into a simple step-by-step Guide
+      </p>
+      <button
+        type="button"
+        class="text-white bg-[#050708] hover:bg-[#050708]/80 focus:ring-4 focus:outline-none focus:ring-[#050708]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:hover:bg-[#050708]/40 dark:focus:ring-gray-600 me-2 mb-2"
+      >
+        Install Wizardshot
+        <svg
+          class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 14 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 5h12m0 0L9 1m4 4L9 9"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="image-container">
+      <div class="bordered-image-container">
+        <img src="/assets/images/image91.png" alt="bordered" />
+      </div>
+      <div class="arrow-container">
+        <img class="arrow" src="/assets/images/Arrow13.svg" alt="Arrow" />
+        <p class="description">
+          It only takes 3 clicks to publish your first tutorial
+        </p>
+      </div>
+    </div>
+
+    <!-- Second Section -->
+    <section class="section">
+      <div class="section-title">
+        <span class="title-line1">Say Goodbye To Writing Docs, and Hello</span
+        ><br />
+        <span class="title-line2">To Wizardshot Doing it for YOU.</span>
+      </div>
+      <div class="image-grid">
+        <div class="image-item">
+          <img src="/assets/images/first.svg" alt="Capture" />
+          <p class="image-text">
+            <strong>3. Done. Article Written</strong><br />
+            <span
+              >Wizardshot carefully crafts the perfect article based on your
+              recorded actions. Just click “Done” and we’ll write up the article
+              in a second.</span
+            >
+          </p>
+        </div>
+        <div class="image-item">
+          <img src="/assets/images/second.svg" alt="Perform Your Actions" />
+          <p class="image-text">
+            <strong>2. Perform Your Actions</strong><br />Once capturing,
+            Wizardshot carefully monitors what you do to understand how to
+            document it.
+          </p>
+        </div>
+        <div class="image-item">
+          <img src="/assets/images/third.svg" alt="Perform Your Actions" />
+
+          <p class="image-text">
+            <strong>3. Done ✅. Article Written</strong><br />Wizardshot
+            carefully crafts the perfect article based off your actions
+            recorded. Just click “Done” and we’ll write up the article in a
+            second.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center">
+      <p class="mb-2 text-5xl font-bold underline">+32 MORE FEATURES</p>
+      <p class="text-3xl text-center">INCLUDING A KB INTEGRATION</p>
+      <img
+        src="/assets/images/btn.svg"
+        alt="btn"
+        class="w-16 h-16 mt-4 left-71"
+      />
+    </div>
+    <div class="feature-text">
+      <span class="big-text ma-1">Free</span>
+      <span class="small-text ma-1"> Free Forever</span>
+      <span class="big-text ma-1">Unlimited</span>
+      <span class="small-text ma-1">Tutorial Creation</span>
+      <span class="big-text ma-1">Powerful</span>
+      <span class="small-text ma-1">Editor & Integrations</span>
+    </div>
+    <div class="gradient-rectangle"></div>
+
+    <div class="container">
+      <h2 class="container-h2">
+        Create A Detailed Tutorial<br />in Less than 3 clicks
+      </h2>
+      <button class="button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          class="w-6 h-6 mr-2"
+          viewBox="0 0 48 48"
+        >
+          <path
+            fill="#4caf50"
+            d="M44,24c0,11.044-8.956,20-20,20S4,35.044,4,24S12.956,4,24,4S44,12.956,44,24z"
+          ></path>
+          <path
+            fill="#ffc107"
+            d="M24,4v20l8,4l-8.843,16c0.317,0,0.526,0,0.843,0c11.053,0,20-8.947,20-20S35.053,4,24,4z"
+          ></path>
+          <path
+            fill="#4caf50"
+            d="M44,24c0,11.044-8.956,20-20,20S4,35.044,4,24S12.956,4,24,4S44,12.956,44,24z"
+          ></path>
+          <path
+            fill="#ffc107"
+            d="M24,4v20l8,4l-8.843,16c0.317,0,0.526,0,0.843,0c11.053,0,20-8.947,20-20S35.053,4,24,4z"
+          ></path>
+          <path
+            fill="#f44336"
+            d="M41.84,15H24v13l-3-1L7.16,13.26H7.14C10.68,7.69,16.91,4,24,4C31.8,4,38.55,8.48,41.84,15z"
+          ></path>
+          <path
+            fill="#dd2c00"
+            d="M7.158,13.264l8.843,14.862L21,27L7.158,13.264z"
+          ></path>
+          <path
+            fill="#558b2f"
+            d="M23.157,44l8.934-16.059L28,25L23.157,44z"
+          ></path>
+          <path fill="#f9a825" d="M41.865,15H24l-1.579,4.58L41.865,15z"></path>
+          <path
+            fill="#fff"
+            d="M33,24c0,4.969-4.031,9-9,9s-9-4.031-9-9s4.031-9,9-9S33,19.031,33,24z"
+          ></path>
+          <path
+            fill="#2196f3"
+            d="M31,24c0,3.867-3.133,7-7,7s-7-3.133-7-7s3.133-7,7-7S31,20.133,31,24z"
+          ></path>
+        </svg>
+        Install Wizardshot
+      </button>
+      <p>
+        <span class="container-second-text">
+          "Has helped us write help docs 100x faster"
+        </span>
+        <br />
+        <span class="container-third-text">
+          – Dany River, Cartier Informatie
+        </span>
+        <img
+          src="assets/images/stars.svg"
+          alt="Stars"
+          class="container-image"
+        />
+      </p>
+      <div class="colored-arrow">
+        <img src="assets/images/Arrow05.svg" alt="Arrow" class="second-arrow" />
+      </div>
+    </div>
+    <!-- Common Questions -->
+    <div class="max-w-6xl p-8 mx-auto mt-6 divide-y">
+      <h2 class="mb-4 text-3xl font-bold text-center">Common Questions</h2>
+      <div class="mb-4">
+        <button
+          class="flex items-center justify-between w-full px-4 py-3 rounded-md focus:outline-none"
+          onclick="toggleAnswer('answer1')"
+        >
+          <span class="text-lg font-semibold">What is Wizardshot?</span>
+          <svg
+            class="w-6 h-6 transition-transform duration-300 transform"
+            id="arrow1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="15" x2="12" y2="9"></line>
+            <line x1="12" y1="9" x2="6" y2="15"></line>
+          </svg>
+        </button>
+        <div id="answer1" class="hidden mt-2 ml-4">
+          Wizardshot is a web app & chrome extension that allows you to create
+          step-by-step tutorials simply by capturing your screen.
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <button
+          class="flex items-center justify-between w-full px-4 py-3 rounded-md focus:outline-none"
+          onclick="toggleAnswer('answer2')"
+        >
+          <span class="text-lg font-semibold">How is Wizardshot Free?</span>
+          <svg
+            class="w-6 h-6 transition-transform duration-300 transform"
+            id="arrow2"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="15" x2="12" y2="9"></line>
+            <line x1="12" y1="9" x2="6" y2="15"></line>
+          </svg>
+        </button>
+        <div id="answer2" class="hidden mt-2 ml-4">
+          <span>
+            The costs to run a service are really inexpensive as most of the
+            processing happens in the Chrome extension.</span
+          >
+          <br />
+          <span>
+            Really - all that we have to pay for is super-secure hosting,
+            awesome 24/7 support and that’s it.</span
+          >
+
+          <br />
+          <span>
+            We built Wizardshot as a stand-alone product with a deep Helpjuice
+            Knowledge Base integration.</span
+          >
+        </div>
+      </div>
+      <div class="mb-4">
+        <button
+          class="flex items-center justify-between w-full px-4 py-3 rounded-md focus:outline-none"
+          onclick="toggleAnswer('answer3')"
+        >
+          <span class="text-lg font-semibold">Is my data secure?</span>
+          <svg
+            class="w-6 h-6 transition-transform duration-300 transform"
+            id="arrow3"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="15" x2="12" y2="9"></line>
+            <line x1="12" y1="9" x2="6" y2="15"></line>
+          </svg>
+        </button>
+        <div id="answer3" class="hidden mt-2 ml-4">
+          Yes, your data is secure. For more information on our security
+          measures, please refer to our privacy policy.
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col items-center justify-between mb-4 md:flex-row mt-7"
+      >
+        <p class="mb-2 text-lg font-semibold md:mb-0 md:mr-4">
+          Curious to learn more?
+        </p>
+        <a
+          href="#"
+          class="inline-block px-6 py-3 font-semibold text-white bg-gray-900 rounded-md hover:bg-gray-500 md:mt-0"
+          >Visit Help & Community Center</a
+        >
+      </div>
+    </div>
+    <div class="third-container">
+      <p class="text">100% free, forever 🤑</p>
+    </div>
+    <div class="second-container">
+      <div>
+        <h3 class="h3-text">Create Tutorials in 3 Clicks</h3>
+        <p class="paragraph-text">
+          With WizardShot, you click "Capture", and we’ll capture what’s
+          happening on your screen and turn it into a tutorial.
+        </p>
+      </div>
+      <div>
+        <h3>Try WizardShot</h3>
+        <svg
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 14 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 5h12m0 0L9 1m4 4L9 9"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <footer class="footer footer-desktop ">
+      <div class="footer-item">
+        <img src="assets/images/Logo(2).svg" alt="Logo" class="logo" />
+        <p class="footer-text">
+          Turn complex process into a simple step-by step Guide
+        </p>
+        <img src="assets/images/teste.svg" alt="Second" class="footer-image" />
+      </div>
+      <div class="footer-item">
+        <h4>Learn More</h4>
+        <ul>
+          <li><a href="#">Wizardshot</a></li>
+          <li><a href="#">Community Page</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Security Information</a></li>
+        </ul>
+      </div>
+      <div class="footer-item">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Status Page</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-item contact">
+        <p class="contact-info">📞 +1 (833) 387 3877</p>
+        <p class="contact-info">
+          ✉️ <a href="mailto:success@wizardshot.com">success@wizardshot.com</a>
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="login-links">
+          <a href="#" class="login-link">Login</a>
+          <span class="separator">|</span>
+          <a href="#" class="login-link">Sign In</a>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright footer-desktop">© 2024 Wizardshot – All rights reserved.</div>
+
+    <!-- Mobile Footer -->
+<footer class="footer footer-mobile">
+  <div class="footer-item">
+      <img src="assets/images/Logo(2).svg" alt="Logo" class="logo" />
+      <p class="footer-text">
+          Turn complex processes into simple step-by-step guides.
+      </p>
+      <img src="assets/images/teste.svg" alt="Second" class="footer-image" />
+  </div>
+  <div class="footer-item">
+    <div class="footer-sections">
+        <div class="learn-more">
+            <h4>Learn More</h4>
+            <ul>
+                <li><a href="#">Wizardshot</a></li>
+                <li><a href="#">Community Page</a></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Security Information</a></li>
+            </ul>
+        </div>
+        <div class="company">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Status Page</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="footer-item">
+  <div class="social-links">
+    <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+  </div>
+  <div class="login-links">
+    <a href="#" class="login-link">Login</a>
+    <span class="separator">|</span>
+    <a href="#" class="login-link">Sign In</a>
+  </div>
+</div>
+<hr class="solid">
+<div class="footer-item">
+  <div class="contact-info-wrapper">
+      <div class="contact-icons">
+          <p>📞 +1 (833) 387 3877</p>
+          <p>✉️ success@wizardshot.com</p>
+      </div>
+      <p class="copyright">© 2024 Wizardshot. All rights reserved.</p>
+  </div>
+</div>
+    <div id="app"></div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
