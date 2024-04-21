@@ -83,7 +83,6 @@ body {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 12rem;
 }
 
 .image-item {
@@ -440,7 +439,7 @@ svg {
     font-size: 1.75rem;
   }
   .left-71 {
-    margin-left: 23rem;
+    margin-left: 14rem;
   }
   .container {
     max-width: 402px;
@@ -467,7 +466,7 @@ svg {
   .second-container {
     flex-direction: column;
     align-items: center;
-    width: 26rem;
+    width: 22rem;
   }
 
   .second-container > div:last-child {
