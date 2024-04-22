@@ -118,7 +118,6 @@ body {
 }
 .feature-text {
   position: relative;
-  display: inline-block;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -305,7 +304,6 @@ svg {
 }
 .second-container::after {
   content: '';
-  content: '';
   position: absolute;
   left: -10%;
   bottom: -1px;
@@ -417,9 +415,6 @@ svg {
     justify-content: flex-start;
     margin-left: 20px;
   }
-  .left-71 {
-    margin-left: 32rem;
-  }
   .section {
     display: flex;
     flex-direction: column;
@@ -492,7 +487,6 @@ svg {
     margin: 0 5px;
   }
   .second-container::after {
-    content: '';
     content: '';
     position: absolute;
     left: -10%;
@@ -619,7 +613,6 @@ svg {
   }
   .second-container::after {
     content: '';
-    content: '';
     position: absolute;
     left: -10%;
     bottom: -1px;
@@ -637,10 +630,6 @@ svg {
 
 @media (min-width: 1200px) and (max-width: 1400px) {
   /* Medium screens */
-  .arrow-container {
-    right: 72%;
-    top: 14%;
-  }
 
   .arrow {
     width: 8vw;
@@ -668,16 +657,8 @@ svg {
   }
 }
 @media (min-width: 1500px) {
-  */
-/* Large screens */
- .arrow-container {
-    right: 62%;
-    top: -3%;
-  }
-  .description {
-    font-size: 1rem;
-    margin-left: 13rem;
-  }
+  /* Large screens */
+
   .arrow {
     width: 5vw;
   }

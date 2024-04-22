@@ -437,7 +437,6 @@
       <div class="mb-4">
         <button
           class="flex items-center justify-between w-full px-4 py-3 rounded-md focus:outline-none"
-          onclick="toggleAnswer('answer1')"
         >
           <span class="text-lg font-semibold">What is Wizardshot?</span>
           <svg
@@ -455,7 +454,7 @@
             <line x1="12" y1="9" x2="6" y2="15"></line>
           </svg>
         </button>
-        <div id="answer1" class="hidden mt-2 ml-4">
+        <div id="answer1" class="mt-2 ml-4 ">
           Wizardshot is a web app & chrome extension that allows you to create
           step-by-step tutorials simply by capturing your screen.
         </div>
@@ -464,7 +463,6 @@
       <div class="mb-4">
         <button
           class="flex items-center justify-between w-full px-4 py-3 rounded-md focus:outline-none"
-          onclick="toggleAnswer('answer2')"
         >
           <span class="text-lg font-semibold">How is Wizardshot Free?</span>
           <svg
@@ -482,7 +480,7 @@
             <line x1="12" y1="9" x2="6" y2="15"></line>
           </svg>
         </button>
-        <div id="answer2" class="hidden mt-2 ml-4">
+        <div id="answer2" class="mt-2 ml-4 ">
           <span>
             The costs to run a service are really inexpensive as most of the
             processing happens in the Chrome extension.</span
@@ -503,7 +501,6 @@
       <div class="mb-4">
         <button
           class="flex items-center justify-between w-full px-4 py-3 rounded-md focus:outline-none"
-          onclick="toggleAnswer('answer3')"
         >
           <span class="text-lg font-semibold">Is my data secure?</span>
           <svg
@@ -521,7 +518,7 @@
             <line x1="12" y1="9" x2="6" y2="15"></line>
           </svg>
         </button>
-        <div id="answer3" class="hidden mt-2 ml-4">
+        <div id="answer3" class="mt-2 ml-4 ">
           Yes, your data is secure. For more information on our security
           measures, please refer to our privacy policy.
         </div>
@@ -666,6 +663,6 @@
 </div>
     <div id="app"></div>
 
-    <script src="/main.js"></script>
+    <script src="/main.js" type="module"></script>
   </body>
 </html>

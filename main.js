@@ -7,15 +7,3 @@ mobileMenuToggle.addEventListener('click', () => {
   icon.classList.toggle('fa-bars');
   icon.classList.toggle('fa-times');
 });
-
-function toggleAnswer(answerId) {
-  const answer = document.getElementById(answerId);
-  const arrow = document.getElementById(`arrow${answerId.slice(-1)}`);
-  if (answer.style.display === 'block') {
-    answer.style.display = 'none';
-    arrow.classList.remove('rotate-180');
-  } else {
-    answer.style.display = 'block';
-    arrow.classList.add('rotate-180');
-  }
-}
